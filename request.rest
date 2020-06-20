@@ -1,0 +1,82 @@
+POST http://localhost:5005/user/register
+Content-Type: application/json
+
+{
+
+    "name": "Prueba 2",
+    "last_name": "fernandes",
+    "password": "1234",
+    "email": "prueba2@gmail.com"
+}
+  
+
+
+
+#######################
+
+
+POST http://localhost:5005/user/login
+Content-Type: application/json
+
+{
+    "email": "prueba2@gmail.com",
+    "password": "1234"
+}
+  
+
+#############################
+GET http://localhost:5005/routes
+
+
+
+#################### Create Route //AGREGAR EL ID DEL USUARIO NUEVO!!!!!!!!!!!!!!!!
+POST http://localhost:5005/routes
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUGVkcm8iLCJlbWFpbCI6InBydWViYTFAZ21haWwuY29tIiwiaWQiOiI1ZWViM2M3YmY0NzY4YjRhZTA5MWZiMGYiLCJpYXQiOjE1OTI0NzQ3NTB9.TZwp8EGwTS5jBqz6Ue9I-VBQuTmSLELHEo3RQ6ZKg3I
+
+{ 
+    "title": "Ruta mientras tanto nueva clase token",
+    "description": "La primeraprueba de ruytas ",
+    "coordinates": [54.23423423, 32.2334234]
+} 
+     
+########################### delete one
+
+DELETE http://localhost:5005/routes/5ee8a9f466cb934c688e9a3e
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmExQGdtYWlsLmNvbSIsImlkIjoiNWVlN2EwZmQ3OWI1OTUzODdjYTUwZWJkIiwiaWF0IjoxNTkyMzI5MzE5fQ.xMdWSxrZr5tpT7T8_mwG1pbycoDUrKykkNx1RtRj15Q
+
+
+
+
+################################## UPDATE ROUTE
+
+PUT http://localhost:5005/routes/5eeb7764140ce92efca54112
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUGVkcm8iLCJlbWFpbCI6InBydWViYTFAZ21haWwuY29tIiwiaWQiOiI1ZWViM2M3YmY0NzY4YjRhZTA5MWZiMGYiLCJpYXQiOjE1OTI0ODk4Mzh9.AH0JEiGh7KepHmeRvY_HjvYxF71RKGTpf80aT8_RgJo
+
+{ 
+    "title": "me han modificado otra vez",
+    "description": " modificada completa ",
+    "user_id": "5eeb3c7bf4768b4ae091fb0f", 
+    "coordinates": [54.23423423, 32.2334234]
+} 
+
+
+##################################### LIST ONE ROUTE
+
+GET http://localhost:5005/routes/5ee7a1cea08181231c048180
+
+
+####################################################### Get One User
+
+GET http://localhost:5005/user
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTnVldm8iLCJlbWFpbCI6InBydWViYTFAZ21haWwuY29tIiwiaWQiOiI1ZWVjOTQyOGQ4ODI1MzMzMTRlMGIzNjgiLCJpYXQiOjE1OTI2NDg5OTB9.MQ646tFnNhpdqqucnmVZ8XvBkvrHIYZ5cMFNQISNCMA
+
+
+
+################################### GET ROUTES FROM USER
+
+
+GET http://localhost:5005/user/routes/myroutes
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTnVldm8iLCJlbWFpbCI6InBydWViYTFAZ21haWwuY29tIiwiaWQiOiI1ZWVjOTQyOGQ4ODI1MzMzMTRlMGIzNjgiLCJpYXQiOjE1OTI1NjI5ODd9.UsodhpUasquk_khlRqD57SdIlOXQ13rDswGYKVWD7bI
