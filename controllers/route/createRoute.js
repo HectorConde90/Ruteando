@@ -19,6 +19,8 @@ const createRoute = async (req, res, next) => {
         newRoute.user_name = user.name + ' ' +user.last_name;
         
         newRoute.user_id = user.id;
+        newRoute.location_coordinates = newRoute.coordinates[0];
+        // newRoute.location.push(newRoute.coordinates[0]) 
         // console.log(newRoute);
         
         // newRoute.name = user.name;

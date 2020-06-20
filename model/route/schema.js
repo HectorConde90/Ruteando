@@ -18,10 +18,13 @@ const routeSchema = mongoose.Schema({
         type: Object
 
     },
-    distance: String,
-    altitude: String,
+    distance: Number,
+    altitude: Number,
     difficulty: String,
     user_name: String,
+    circular: Boolean,
+    location: String,
+    location_coordinates: Array,
     register_date: Date
 
 })

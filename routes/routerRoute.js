@@ -5,6 +5,7 @@ import authUser from '../middleware/authentication.js';
 import deleteOne from '../controllers/route/deleteOne.js';
 import updateOne from '../controllers/route/updateOne.js'
 import listOne from '../controllers/route/listOne.js';
+import searchRoute from '../controllers/route/searchRoute.js';
 
 const router = Router();
 
@@ -19,6 +20,8 @@ router.route('/:id')
     .get(listOne)
     .delete(authUser, deleteOne)
     .put(authUser,updateOne)
+router.route('/search')
+    .post(searchRoute)
 
 
 export default router;

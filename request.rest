@@ -80,3 +80,14 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTnVldm8iL
 
 GET http://localhost:5005/user/routes/myroutes
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTnVldm8iLCJlbWFpbCI6InBydWViYTFAZ21haWwuY29tIiwiaWQiOiI1ZWVjOTQyOGQ4ODI1MzMzMTRlMGIzNjgiLCJpYXQiOjE1OTI1NjI5ODd9.UsodhpUasquk_khlRqD57SdIlOXQ13rDswGYKVWD7bI
+
+
+################################
+
+POST http://localhost:5005/routes/search
+Content-Type: application/json
+
+{
+    "location": "Cataluña"
+   
+}
