@@ -4,8 +4,8 @@ class RouteDAO {
 
     constructor() { }
 
-    list() {
-        return Route.find();
+    list(num = 10) {
+        return Route.find().sort({ _id: -1}).limit(num);
     }
 
     create(route) {

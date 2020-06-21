@@ -25,7 +25,7 @@ Content-Type: application/json
   
 
 #############################
-GET http://localhost:5005/routes
+GET http://localhost:5005/routes/1
 
 
 

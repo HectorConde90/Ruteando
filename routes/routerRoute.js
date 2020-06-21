@@ -10,9 +10,9 @@ import searchRoute from '../controllers/route/searchRoute.js';
 const router = Router();
 
 
-
+router.route('/:num')
+.get(list)
 router.route('/')
-    .get(list)
     .post(authUser, create);
 
 

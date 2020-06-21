@@ -5,8 +5,8 @@ const listRoutes = async (req, res, next) => {
 
     try {
 
-        
-        const route = await routeDAO.list();
+        const limit = Number(req.params.num)
+        const route = await routeDAO.list(limit);
 
         res.status(201).json(route);
 
