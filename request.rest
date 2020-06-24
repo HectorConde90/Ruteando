@@ -65,7 +65,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiUGVkcm8iL
 
 ##################################### LIST ONE ROUTE
 
-GET http://localhost:5005/routes/5ee7a1cea08181231c048180
+GET http://localhost:5005/routes/getroute/5eef334ae09b0650f00449af
 
 
 ####################################################### Get One User

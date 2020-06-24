@@ -25,12 +25,12 @@ class RouteDAO {
     }
 
     findRoutes(id) {
-        return Route.find({ _id: id });
+        return Route.find({ _id: id }).sort({_id: -1});
     }
 
     searchRoutes(params) {
-        const search = { $and: params}
-        return Route.find(search);
+        const search = { $and: params }
+        return Route.find(search).sort({_id: -1});
     }
     
 

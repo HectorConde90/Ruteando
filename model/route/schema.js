@@ -25,7 +25,8 @@ const routeSchema = mongoose.Schema({
     circular: Boolean,
     location: String,
     location_coordinates: Array,
-    register_date: Date
+    register_date: Date,
+    itinerary: String
 
 })
 

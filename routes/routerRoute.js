@@ -11,13 +11,17 @@ const router = Router();
 
 
 router.route('/:num')
-.get(list)
+    .get(list);
+
 router.route('/')
     .post(authUser, create);
 
 
-router.route('/:id')
+router.route('/getroute/:id')
     .get(listOne)
+
+
+ router.route('/:id')   
     .delete(authUser, deleteOne)
     .put(authUser,updateOne)
 router.route('/search')
