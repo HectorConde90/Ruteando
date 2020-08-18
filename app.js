@@ -6,6 +6,10 @@ import mongo from './data/mongodb.js';
 import dotenv from 'dotenv';
 import handleError from './middleware/handlError.js';
 
+const sendSpaFileIfUnmatched = (req, res) => {
+    res.sendFile("/public/index.html", { root: __dirname });
+}
+
 dotenv.config();
 
 
@@ -16,11 +20,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//Static
+// static html
+app.use(express.static(__dirname + '/public'));
 
 // Routes
 
-app.use('/routes', routerRoute);
-app.use('/user', routerUser);
+app.use('/api/routes', routerRoute);
+app.use('/api/user', routerUser);
 
 // MiddlewareError
 
@@ -30,7 +37,7 @@ app.use(handleError.genericError);
 
 
 
-
+app.use(sendSpaFileIfUnmatched);
 
 // Server listen
 const PORT = process.env.PORT || 5000
